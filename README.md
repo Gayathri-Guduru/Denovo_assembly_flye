@@ -49,7 +49,8 @@ And if you want to end the interactive mode type *exit*
 #### Next step is mapping the reference genome to the assembly fasta file.
 #### Download the fasta sequence from https://www.addgene.org/50005/sequences/ which is the reference fasta file.
 
-# Extra Steps:(if you are not provided with a reference fasta sequence file)
+# Extra Steps:
+###(if you are not provided with a reference fasta sequence file)
 #### Download the genbank sequence which is in the format .gbk, from https://www.addgene.org/50005/sequences/ and convert it to fasta format.
 #### create a ```genbank_to_fasta.py``` python script to convert genbank sequence to fasta format
 ```
