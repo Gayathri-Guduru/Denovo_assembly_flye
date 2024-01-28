@@ -33,7 +33,7 @@ And if you want to end the interactive mode type *exit*
 # Assembly using FLYE
 #### Create a script name ```flye.sh``` that has the command to perform assembly.
 ```
-/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye -g 1m -t 10 -i 2
+/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye -g 2.4k -t 10 -i 2
 ```
 
 ## outputs
