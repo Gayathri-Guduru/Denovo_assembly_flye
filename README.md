@@ -37,12 +37,12 @@ And if you want to end the interactive mode type *exit*
 ```
 
 ## outputs
-00-assembly, 20-repeat, 30-contigger, 10-consensus, 40-polishing
-params.json
-assembly_graph.gv
-assembly_graph.gfa
-assembly.fasta
-assembly_info.txt
+```00-assembly```, ```20-repeat```, ```30-contigger```, ```10-consensus```, ```40-polishing```
+```params.json```
+```assembly_graph.gv```
+```assembly_graph.gfa```
+```assembly.fasta```
+```assembly_info.txt```
 
 ### It also provides assembly stats
 
