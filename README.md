@@ -24,3 +24,15 @@ And, the squeue command is used to pull up information about jobs in the queue, 
 squeue -u username
 ```
 And if you want to end the interactive mode type *exit*
+
+# The files provided initially is ```raw_data.fq.gz```
+
+# Inorder to start the analysis, we need to activate the conda environment 
+```conda activate flye```
+
+# Assembly using FLYE
+# Create a script name ```flye.sh``` that has the command to perform assembly.
+```
+/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye_8k -g 1m -t 10 -i 2
+```
+
