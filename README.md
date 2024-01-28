@@ -33,6 +33,32 @@ And if you want to end the interactive mode type *exit*
 # Assembly using FLYE
 # Create a script name ```flye.sh``` that has the command to perform assembly.
 ```
-/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye_8k -g 1m -t 10 -i 2
+/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye -g 1m -t 10 -i 2
 ```
 
+# outputs
+00-assembly, 20-repeat, 30-contigger, 10-consensus, 40-polishing
+params.json
+assembly_graph.gv
+assembly_graph.gfa
+assembly.fasta
+assembly_info.txt
+
+# It also provides assembly stats
+
+# Next step is mapping the reference genome to the assembly fasta file.
+# Download the genbank sequence from https://www.addgene.org/50005/sequences/ and convert it to fasta format
+ 
+ # create a ```genbank_to_fasta.py``` python script to convert genbank sequence to fasta format
+```
+import warnings
+from Bio import BiopythonParserWarning
+warnings.simplefilter('ignore', BiopythonParserWarning)
+from Bio import SeqIO                                                                                                                                                                                             # Replace this with the path to your GenBank file
+genbank_file_path = "/home/guduru.g/flye/addgene-plasmid-50005-sequence-222046.gbk"                                                                                                                               # Replace this with the desired output path for the FASTA file
+fasta_file_path = "/home/guduru.g/flye/reference_pUC19.fasta"
+# Converting GenBank file to FASTA format
+with open(genbank_file_path) as input_handle, open(fasta_file_path, "w") as output_handle:
+sequences = SeqIO.parse(input_handle, "genbank")
+count = SeqIO.write(sequences, output_handle, "fasta")                                                                                                                                                            print(f"Converted {count} records to FASTA format")
+```
