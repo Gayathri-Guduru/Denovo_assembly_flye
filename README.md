@@ -47,8 +47,10 @@ assembly_info.txt
 ### It also provides assembly stats
 
 #### Next step is mapping the reference genome to the assembly fasta file.
-#### Download the genbank sequence which is in the format .gbk, from https://www.addgene.org/50005/sequences/ and convert it to fasta format
- 
+#### Download the fasta sequence from https://www.addgene.org/50005/sequences/ which is the reference fasta file.
+
+# Extra Steps:(if you are not provided with a reference fasta sequence file)
+#### Download the genbank sequence which is in the format .gbk, from https://www.addgene.org/50005/sequences/ and convert it to fasta format.
 #### create a ```genbank_to_fasta.py``` python script to convert genbank sequence to fasta format
 ```
 import warnings
@@ -65,10 +67,10 @@ count = SeqIO.write(sequences, output_handle, "fasta")                          
 #### This provides ```reference_pUC19.fasta``` reference file that is used to map with assembly fasta file.
 
 #### Now, for mapping we use ```MUMmer```
-```nucmer --prefix=out reference_pUC19.fasta assembly.fasta```
+```/home/guduru.g/miniconda3/envs/bowtie2/bin/nucmer --prefix=out reference.fasta out_flye/assembly.fasta```
 
 ## Generate a Readable Report:
 #### To view the alignment, you can use the show-coords utility:
-```show-coords -rcl out.delta > alignment_report.txt```
+```/home/guduru.g/miniconda3/envs/bowtie2/bin/show-coords -rcl out.delta > alignment_report.txt```
 
 #### This creates a file named ```alignment_report.txt``` with a readable alignment report.
