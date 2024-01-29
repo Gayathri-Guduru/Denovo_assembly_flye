@@ -33,8 +33,9 @@ And if you want to end the interactive mode type *exit*
 # Assembly using FLYE
 #### Create a script name ```flye.sh``` that has the command to perform assembly.
 ```
-/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye -g 2.4k -t 10
+/home/guduru.g/miniconda3/envs/flye/bin/flye --nano-raw raw_data.fq -o out_flye -g 2.4k -t 10 -i 10
 ```
+You can always do a trial test with iterations part (-i option) until you get a best genome assembly.
 
 ## outputs
 ```00-assembly```, ```20-repeat```, ```30-contigger```, ```10-consensus```, ```40-polishing```
