@@ -46,6 +46,8 @@ You can always do a trial test with iterations part (-i option) until you get a 
 ```assembly_info.txt```
 
 ### It also provides assembly stats
+![image](https://github.com/Gayathri-Guduru/Denovo_assembly_flye/assets/98939664/4f2b7967-ae62-49a1-8b3f-7c9974e058fa)
+
 
 #### Next step is mapping the reference genome to the assembly fasta file.
 #### Download the fasta sequence from https://www.addgene.org/50005/sequences/ which is the reference fasta file.
