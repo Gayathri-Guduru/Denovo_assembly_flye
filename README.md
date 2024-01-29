@@ -75,3 +75,14 @@ count = SeqIO.write(sequences, output_handle, "fasta")                          
 ```/home/guduru.g/miniconda3/envs/bowtie2/bin/show-coords -rcl out.delta > alignment_report.txt```
 
 #### This creates a file named ```alignment_report.txt``` with a readable alignment report.
+
+#### Perform ```blastN``` online to compare the mapping results got from MUMmer.
+![image](https://github.com/Gayathri-Guduru/Denovo_assembly_flye/assets/98939664/81faf3b5-5236-4b15-a453-620602504e56)
+
+#### The image displays BLASTn results showing a perfect match (100% identity, 0% gaps) between the query sequence and the cloning vector pUC19c (GenBank accession L09137.2), suggesting the query(our assembly) is identical to this well-characterized vector sequence.
+
+#### Futher Circos is performed for visualizing and to show similarly of your query vs the reference sequence sequences at region wise.
+![proksee-7997x4364](https://github.com/Gayathri-Guduru/Denovo_assembly_flye/assets/98939664/d61cb06a-d953-45a7-b113-8db330098425)
+
+#### The image shows a circular map of the pUC19 plasmid which is 2,686 base pairs in size. The map features several concentric circles: the outermost circle represents the reference pUC19 sequence, the next one in blue indicates a de novo assembly for comparison. Inside, there are two tracks for GC content (black) and GC skew, with green representing positive skew and purple representing negative skew. The GC skew tracks show the asymmetry in the distribution of guanine and cytosine nucleotides. This kind of map is typically used in genomics to visualize and compare genomic features.
+
